@@ -45,7 +45,7 @@ packages:
   device_base_wifi: !include ../base/device_base_wifi.yaml
   device_cpu_freq_240: !include board_options_cpu_freq_240_esp32-s3.yaml
   board_rgb_led: !include board_options_rgb_led_status.yaml
-  # psram: !include board_options_psram_settings.yaml
+  psram: !include board_options_psram_settings.yaml
 
 esp32:
   board: esp32-s3-devkitc-1
@@ -59,9 +59,9 @@ esphome:
     board_build.flash_mode: dio             # use Dual IO (dio) instead of Quad IO (qio) to prevent boot loop after flashing
 
 # PSRAM activation with default options
-# psram:
-#   mode: octal
-#   speed: 80MHz
+psram:
+  mode: octal
+  speed: 80MHz
 
 wifi:
   id: my_network
